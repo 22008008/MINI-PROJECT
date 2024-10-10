@@ -7,14 +7,14 @@ REGISTER NUMBER : 212222220049
 To write a program to train the classifier for Plant Growth Data.
 # Algorithm:
 
-Load Data: Load the dataset and split it into features (X) and target (y).
-Train-Test Split: Split the data into training and testing sets.
-Handle Imbalance: Apply SMOTE to balance the training set.
-Preprocess: Use a column transformer to scale numerical features and one-hot encode categorical features.
-Pipeline Setup: Build a pipeline with preprocessing and a RandomForestClassifier.
-Hyperparameter Tuning: Use GridSearchCV to tune hyperparameters like n_estimators, max_depth, etc.
-Model Training: Train the model on the balanced training data.
-Evaluate: Predict on test data, and evaluate using accuracy, confusion matrix, and classification report.
+1.Load Data: Load the dataset and split it into features (X) and target (y).
+2.Train-Test Split: Split the data into training and testing sets.
+3.Handle Imbalance: Apply SMOTE to balance the training set.
+4.Preprocess: Use a column transformer to scale numerical features and one-hot encode categorical features.
+5.Pipeline Setup: Build a pipeline with preprocessing and a RandomForestClassifier.
+6.Hyperparameter Tuning: Use GridSearchCV to tune hyperparameters like n_estimators, max_depth, etc.
+7.Model Training: Train the model on the balanced training data.
+8.Evaluate: Predict on test data, and evaluate using accuracy, confusion matrix, and classification report.
 
 # Program:
 ```
