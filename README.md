@@ -78,10 +78,10 @@ print(classification_report(y_test, y_pred))
 ```
 
 # Output:
-PIPELINE:
+                        PIPELINE:
  ![image](https://github.com/user-attachments/assets/bf5c62f8-3149-46ec-9380-658f9b8e2e1f)
 
-EVALUATION:
+                        EVALUATION:
 ![op](https://github.com/user-attachments/assets/2cfa58d8-2f4f-4b8b-b563-b5f6f90be466)
 
 
