@@ -1,4 +1,4 @@
-# Ex.No: 10 Plant Growth Data classification– Machine Learning  
+![image](https://github.com/user-attachments/assets/ffc80416-3d34-4230-b510-bc48b54ae865)# Ex.No: 10 Plant Growth Data classification– Machine Learning  
 
 NAME : SRI RANJANI PRIYA P
 REGISTER NUMBER : 212222220049
@@ -55,10 +55,8 @@ for name, (clf, params) in classifiers.items():
 ```
 
 # Output:
-```
-                           
-![image](https://github.com/user-attachments/assets/0819a527-61ec-4290-9cd5-ec6140c2b812)
 
-```
+![image](https://github.com/user-attachments/assets/6876ee24-c823-4b54-b143-5de6900bc5ba)
+
 # Result:
 Thus the system was trained successfully and the prediction was carried out.
