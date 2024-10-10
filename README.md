@@ -18,71 +18,43 @@ To write a program to train the classifier for Plant Growth Data.
 
 # Program:
 ```
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+
+from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, confusion_matrix
 
-data = pd.read_csv('/content/plant_growth_data.csv')
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
 
-print(data.head())
-X = data.iloc[:, :-1]  # Features
-y = data.iloc[:, -1]   # Target variable
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-pip install pandas scikit-learn
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
+classifiers = {
+    'RandomForest': (RandomForestClassifier(), {
+        'n_estimators': [100, 200, 300, 400],
+        'max_depth': [None, 10, 20, 30],
+        'min_samples_split': [2, 5, 10],
+        'min_samples_leaf': [1, 2, 4],
+        'bootstrap': [True, False]
+    })}
 
-categorical_cols = X.select_dtypes(include=['object']).columns
-numeric_cols = X.select_dtypes(exclude=['object']).columns
 
-# Create a column transformer for preprocessing
-preprocessor = ColumnTransformer(
-    transformers=[
-        ('num', StandardScaler(), numeric_cols),          # Scale numeric features
-        ('cat', OneHotEncoder(), categorical_cols)        # One-Hot Encode categorical features
-    ])
+for name, (clf, params) in classifiers.items():
+    grid_search = GridSearchCV(clf, params, cv=3, scoring='accuracy', n_jobs=-1)
+    grid_search.fit(X, y)
 
-from sklearn.pipeline import Pipeline
+    y_pred = grid_search.predict(X_test)
 
-categorical_cols = X.select_dtypes(include=['object']).columns
-numeric_cols = X.select_dtypes(exclude=['object']).columns
+    accuracy = accuracy_score(y_test, y_pred)
 
-# Create a column transformer for preprocessing
-preprocessor = ColumnTransformer(
-    transformers=[
-        ('num', StandardScaler(), numeric_cols),          # Scale numeric features
-        ('cat', OneHotEncoder(), categorical_cols)        # One-Hot Encode categorical features
-    ])
-
-model = Pipeline(steps=[
-    ('preprocessor', preprocessor),
-    ('classifier', RandomForestClassifier(random_state=42))
-])
-
-model.fit(X_train, y_train)
-
-y_pred = model.predict(X_test)
-
-print("Confusion Matrix:")
-print(confusion_matrix(y_test, y_pred))
-
-print("Confusion Matrix:")
-print(confusion_matrix(y_test, y_pred))
-print("\nClassification Report:")
-print(classification_report(y_test, y_pred))
+    print(f"{name}: Best Params: {grid_search.best_params_}, Accuracy: {accuracy:.4f}")
 
 ```
 
 # Output:
-                        PIPELINE:
- ![image](https://github.com/user-attachments/assets/bf5c62f8-3149-46ec-9380-658f9b8e2e1f)
-
-                        EVALUATION:
-![op](https://github.com/user-attachments/assets/2cfa58d8-2f4f-4b8b-b563-b5f6f90be466)
+                             ACCURACY:
+![image](https://github.com/user-attachments/assets/0819a527-61ec-4290-9cd5-ec6140c2b812)
 
 
 # Result:
