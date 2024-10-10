@@ -1,4 +1,4 @@
-# Ex.No: 10 Learning – Use Supervised Learning  
+# Ex.No: 10 Plant Growth Data classification– Machine Learning  
 
 NAME : SRI RANJANI PRIYA P
 REGISTER NUMBER : 212222220049
