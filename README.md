@@ -51,22 +51,7 @@ for name, (clf, params) in classifiers.items():
 
     print(f"{name}: Best Params: {grid_search.best_params_}, Accuracy: {accuracy:.4f}")
 
-```
-# Classification Figures:
-```
-https://github.com/user-attachments/assets/f3c332cc-4cc4-4a23-bb50-d3b2f3173a49
 
-![image](https://github.com/user-attachments/assets/30191d6b-beed-4a4a-b11f-0801999600c3)
-
-![image](https://github.com/user-attachments/assets/8167ba3f-3306-4640-83cd-ee5c0db36e6d)
-
-![image](https://github.com/user-attachments/assets/f1b08fe2-0b80-434e-9211-281bf1af92af)
-
-![image](https://github.com/user-attachments/assets/d63982d1-2da3-4152-bac5-51fd9e10affc)
-
-![image](https://github.com/user-attachments/assets/b1b29ac1-1384-484b-a4e3-129e1293153c)
-
-![image](https://github.com/user-attachments/assets/53510f14-7631-486e-a419-abfea4a14238)
 ```
 
 # Output:
