@@ -1,7 +1,7 @@
 # Ex.No: 10 Plant Growth Data classification– Machine Learning  
 
-NAME : GOPIKA
-REGISTER NUMBER : 212222040046
+NAME : SRI RANJANI PRIYA
+REGISTER NUMBER : 212222220049
 
 # AIM: 
 To write a program to train the classifier for Plant Growth Data.
