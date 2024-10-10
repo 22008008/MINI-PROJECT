@@ -54,7 +54,7 @@ for name, (clf, params) in classifiers.items():
 ```
 # Classification Figures:
 ```
-![image](https://github.com/user-attachments/assets/f3c332cc-4cc4-4a23-bb50-d3b2f3173a49)
+https://github.com/user-attachments/assets/f3c332cc-4cc4-4a23-bb50-d3b2f3173a49
 
 ![image](https://github.com/user-attachments/assets/30191d6b-beed-4a4a-b11f-0801999600c3)
 
