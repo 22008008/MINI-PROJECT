@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/ffc80416-3d34-4230-b510-bc48b54ae865)# Ex.No: 10 Plant Growth Data classification– Machine Learning  
+# Ex.No: 10 Plant Growth Data classification– Machine Learning  
 
 NAME : SRI RANJANI PRIYA P
 REGISTER NUMBER : 212222220049
